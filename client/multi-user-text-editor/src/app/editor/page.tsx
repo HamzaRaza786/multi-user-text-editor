@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 let socket: any;
 const socketInitializer = async () => {
-  socket = io('http://localhost:3001'); // Adjust the URL to match your server
+  socket = io('ws://127.0.0.1:3001/ws'); // Adjust the URL to match your server
   socket.on('connect', () => {
     console.log('Connected to socket server');
   });
